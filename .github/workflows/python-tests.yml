@@ -17,6 +17,11 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Run Q2 unit tests
+      - name: Install coverage
+        run: pip install coverage
+
+      - name: Run Q2 unit tests with coverage
         working-directory: Q2
-        run: python -m unittest -v CalcTest.py
+        run: |
+          coverage run -m unittest -v CalcTest.py
+          coverage report -m
