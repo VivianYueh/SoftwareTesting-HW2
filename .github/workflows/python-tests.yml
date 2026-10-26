@@ -20,7 +20,7 @@ jobs:
       - name: Install coverage
         run: pip install coverage
 
-      - name: Run Q2 unit tests with coverage
+      - name: Run Q2 tests with coverage
         working-directory: Q2
         run: |
           coverage run -m unittest -v CalcTest.py
