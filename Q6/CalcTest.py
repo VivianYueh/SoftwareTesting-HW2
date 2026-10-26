@@ -47,5 +47,10 @@ class TestCalculator(unittest.TestCase):
         result = calc.power(0, 0)
         self.assertEqual(result, 1)
 
+    def test_power_negative_exponent(self):
+        calc = Calculator()
+        result = calc.power(2, -3)
+        self.assertEqual(result, 0.125)
+
 if __name__ == "__main__":
     unittest.main()
