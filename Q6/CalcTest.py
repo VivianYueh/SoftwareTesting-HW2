@@ -32,5 +32,10 @@ class TestCalculator(unittest.TestCase):
         result = calc.modulo(-5, 3)
         self.assertEqual(result, 1)
 
+    def test_modulo_zero_divisor(self):
+        calc = Calculator()
+        with self.assertRaises(ValueError):
+            calc.modulo(5, 0)
+
 if __name__ == "__main__":
     unittest.main()
