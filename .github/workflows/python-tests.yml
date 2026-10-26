@@ -1,4 +1,4 @@
-name: Python Tests
+name: Q2 Python Tests
 
 on:
   push:
@@ -17,5 +17,6 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Run unit tests
+      - name: Run Q2 unit tests
+        working-directory: Q2
         run: python -m unittest -v CalcTest.py
