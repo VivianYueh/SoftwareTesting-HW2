@@ -22,5 +22,10 @@ class TestCalculator(unittest.TestCase):
         result = calc.divide(5,2)
         self.assertEqual(result,2.5)
 
+    def test_modulo_positive_operands(self):
+        calc = Calculator()
+        result = calc.modulo(5, 3)
+        self.assertEqual(result, 2)
+
 if __name__ == "__main__":
     unittest.main()
