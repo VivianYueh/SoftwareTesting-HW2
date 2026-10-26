@@ -8,6 +8,8 @@ class Calculator:
     def divide(self, a, b):
         return a / b
     def modulo(self, a, b):
+        if b == 0:
+            raise ValueError("Modulo divisor must not be zero")
         if b < 0:
             raise NotImplementedError("Negative modulo divisors are not supported yet")
         return a % b
