@@ -7,3 +7,7 @@ class Calculator:
         return a * b
     def divide(self, a, b):
         return a / b
+    def modulo(self, a, b):
+        if a < 0 or b < 0:
+            raise NotImplementedError("Negative modulo operands are not supported yet")
+        return a % b
