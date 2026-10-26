@@ -13,3 +13,7 @@ class Calculator:
         if b < 0:
             raise NotImplementedError("Negative modulo divisors are not supported yet")
         return a % b
+    def power(self, base, exponent):
+        if exponent <= 0:
+            raise NotImplementedError("Non-positive exponents are not supported yet")
+        return base ** exponent
