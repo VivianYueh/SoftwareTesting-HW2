@@ -27,5 +27,10 @@ class TestCalculator(unittest.TestCase):
         result = calc.modulo(5, 3)
         self.assertEqual(result, 2)
 
+    def test_modulo_negative_dividend(self):
+        calc = Calculator()
+        result = calc.modulo(-5, 3)
+        self.assertEqual(result, 1)
+
 if __name__ == "__main__":
     unittest.main()
